@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Canvas Shape and Colour Effects</title>
+<style>
+	body{
+		overflow: hidden;
+		background: #000;
+	}
+	canvas{
+		width:100vw;
+		height:100vh;
+	}
+</style>
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+</script>
+<script>
+	var c = document.createElement('canvas');
+	var $ = c.getContext('2d');
+
+	var w = window.innerWidth,
+		h = window.innerHeight;
+
+	c.width = w;
+	c.height = h;
+
+	c.addEventListener('mousedown', mouseDown, true);
+	document.body.appendChild(c);
+
+	var part;//particle
+	var meshW = 100;//mesh width
+	var dispX = -50; //x disposition
+	var dispY = -100; //y disposition
+	var partX = 0; //particle x
+	var partY = 0; //particle y
+	var partIndX = 0; //particle index x
+	var partIndY = 0; //particle index y
+
+	var col0 = "rgb(74, 1, "; //shading color-starts
+	var col1 = "rgb(0, 3, ";
+
+	var partList = []; //particle array
+	var gridW = w + meshW; //grid width
+	var gridH = h + meshW * 2; //grid height
+
+	while(partY < gridH){
+		while(partX < gridW){
+			part = new Object(partX, partY, partIndX, partIndY);
+		}
+	} 
+
+</script>
+	</body>
+</html>
